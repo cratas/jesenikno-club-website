@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>TJ Slavoj</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style-1.scss'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="logo">
+                <a class="navbar-brand" href="#"></a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="index.html">DOMŮ</a></li>
+                    <li class="active-page"><a href="muzi.html">MUŽI</a></li>
+                    <li><a href="#">DOROST</a></li>
+                    <li><a href="#">ŽÁCI</a></li>
+                    <li><a href="#">PŘÍPRAVKA</a></li>
+                    <li><a href="#">KLUB</a></li>
+                    <li><a href="#">KONTAKT</a></li>
+                    <li><a href="#">
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+
+    <!-- Carousel with into images -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="main-desc">
+                <span class="main-desc-1">VÍTEJTE NA OFICIÁLNÍCH STRÁNKACH</span>
+                <br>
+                <span class="main-desc-2">TJ SLAVOJ JESENÍK NAD ODROU</span>
+                <br>
+                <div class="arrow-container" onclick="scrollDown()">
+                    <div class="arrow"></div>
+                    <!-- <div class="arrow"></div> -->
+                </div>
+            </div>
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="images/img05.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/img01.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/img03.jpg" alt="Third slide">
+            </div>
+        </div>
+    </div>
+    <!-- <div class="red-line"></div> -->
+
+
+
+    <!-- middle section  -->
+    <div class="container-fluid middle-section-background">
+        <div class="container">
+            <div class="result-section">
+                <a href="#">
+                    <div class="result-images">
+                        <div class="muzi">
+                        </div>
+                        <div class="result-title">MUŽI</div>
+                        <div class="result-text">TJ SLAVOJ JESENÍK<br><span class="result-text-result">3:1</span><br>TJ SOKOL OSTRAVICE</div>
+                        <!-- <button class="result-button">ČÍST</button> -->
+                        <div class="result-date">15/8/2021</div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="result-images">
+                        <div class="dorost">
+                        </div>
+                        <div class="result-title">DOROST</div>
+                        <div class="result-date">12/8/2021</div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="result-images">
+                        <div class="zaci">
+                        </div>
+                        <div class="result-title">ŽÁCI</div>
+                        <div class="result-date">12/8/2021</div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="result-images">
+                        <div class="pripravka">
+                        </div>
+                        <div class="result-title">PŘÍPRAVKA</div>
+                        <div class="result-date">12/8/2021</div>
+                    </div>
+                </a>
+                <button class="results-bottom-button">VŠECHNY VÝSLEDKY</button>
+            </div>
+        </div>
+    </div>
+    <!-- title -->
+    <div class="next-matches-section">
+        <div class="container next-matches-title">
+            <h2>DALŠÍ ZÁPAS</h2>
+        </div>
+        <div class="container">
+            <div class="next-match-wrap">
+                <div class="match-results-divider-line"></div>
+                <div class="next-match-card ">
+                    <div class="next-match-col">
+                        <img src="images/logo.png" alt="Girl in a jacket" width="85" height="100">
+                    </div>
+                    <div class="next-match-col">
+                        <div class="result-title" style="background-color: rgb(13,12,181);">MUŽI</div>
+                        <h3>FK Starý Jičín</h3>
+                        <h2>18/9/2021</h2>
+                        <h1>14:00</h1>
+                    </div>
+                    <div class="next-match-col">
+                        <img src="images/stary-jicin.png" alt="Girl in a jacket" width="100" height="100">
+                    </div>
+                    <a href="#" class="next-match-all">ROZPIS<span class="arrow-next-match">&raquo;</span></a>
+
+                    <!-- <div class="next-match-card-title">MUŽI</div> -->
+                </div>
+
+                <div class="match-results-divider-line"></div>
+                <!-- <h1>TJ Slavoj JESENÍK</h1> -->
+                <div class="next-match-card">
+                    <div class="next-match-col">
+                        <img src="images/ostravice.png" alt="Girl in a jacket" width="100" height="100">
+                    </div>
+                    <div class="next-match-col">
+                        <div class="result-title" style="background-color: rgb(13,12,181);">DOROST</div>
+                        <h3>FK Ostravice</h3>
+                        <h2>19/9/2021</h2>
+                        <h1>16:30</h1>
+                    </div>
+                    <div class="next-match-col">
+                        <img src="images/logo.png" alt="Girl in a jacket" width="85" height="100">
+                    </div>
+                    <a href="#" class="next-match-all">ROZPIS<span class="arrow-next-match">&raquo;</span></a>
+                </div>
+
+                <div class="match-results-divider-line"></div>
+                <!-- <h1>TJ Slavoj JESENÍK</h1> -->
+                <div class="next-match-card">
+                    <div class="next-match-col">
+                        <img src="images/koprivnice.png" alt="Girl in a jacket" width="100" height="100">
+                    </div>
+                    <div class="next-match-col">
+                        <div class="result-title" style="background-color: rgb(13,12,181);">ŽÁCI</div>
+                        <h3>FK Kopřivnice</h3>
+                        <h2>19/9/2021</h2>
+                        <h1>15:15</h1>
+                    </div>
+                    <div class="next-match-col">
+                        <img src="images/logo.png" alt="Girl in a jacket" width="85" height="100">
+                    </div>
+                    <a href="#" class="next-match-all">ROZPIS<span class="arrow-next-match">&raquo;</span></a>
+                </div>
+
+                <div class="match-results-divider-line"></div>
+                <!-- <h1>TJ Slavoj JESENÍK</h1> -->
+                <div class="next-match-card">
+                    <div class="next-match-col">
+                        <img src="images/logo.png" alt="Girl in a jacket" width="85" height="100">
+                    </div>
+                    <div class="next-match-col">
+                        <div class="result-title" style="background-color: rgb(13,12,181);">PŘÍPRAVKA</div>
+                        <h3>TJ Mořkov</h3>
+                        <h2>19/9/2021</h2>
+                        <h1>15:15</h1>
+                    </div>
+                    <div class="next-match-col">
+                        <img src="images/morkov.png" alt="Girl in a jacket" width="100" height="100">
+                    </div>
+                    <a href="#" class="next-match-all">ROZPIS<span class="arrow-next-match">&raquo;</span></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <div class="sponsors">
+
+    </div>
+    <!-- bottom section -->
+    <div class="container-fluid bottom-section">
+        <!-- <p>© TJ Slavoj Jeseník nad Odrou</p> -->
+        <h2>SLEDUJTE NÁS</h2>
+        <a href="https://www.facebook.com/TJ-Slavoj-Jesen%C3%ADk-nad-Odrou-111503132289346"><img
+                src="images/facebook-icon.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/slavoj_cz/"><img src="images/instagram-icon.png" alt="Instagram"></a>
+    </div>
+
+</body>
+
+</html>
