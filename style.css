@@ -12,12 +12,13 @@ body {
     font-size: 62.5%;
     font-size: 10px;
 }
-/*-- Inspiration taken from abdo steif -->
-/* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
 
-/* Navbar section */
+*:focus {
+    outline: 0 !important;
+}
+/* Style for all HTML files */
 
-
+/* Style for index.html file only */
 .d-block.w-100 {
     filter: brightness(50%);
 }
@@ -53,10 +54,17 @@ li.active-page {
     font-family: 'Sintony', sans-serif;
     font-family: 'Sora', sans-serif;
     font-weight: 600;
-    animation: navAnimation ease 4s;
+    animation: navAnimation ease 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
+
+.dynamic.main-nav {
+    animation: navAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
 
 .main-nav div.logo {
     float: left;
@@ -212,10 +220,7 @@ li.active-page {
   }
 
 .arrow-container {
-    animation: fadeAnimationThree 4s forwards, arrowAnimation 3s infinite;
-    /* animation: fadeAnimation, arrowAnimation;
-    animation-duration: 4s, 3s;
-    animation-iteration-count: 1, infinite; */
+    animation: fadeAnimationThree 3s forwards, arrowAnimation 3s infinite;
     display: block;
     width: 6vw;
     height: 5vw;
@@ -303,9 +308,9 @@ li.active-page {
     .navTrigger {
         display: block;
     }
-    .affi.main-nav {
+    .affix.main-nav {
         padding: 0;
-        background-color: red;
+        /* background-color: red; */
     }
     .navbar-brand {
         position: absolute;
@@ -608,7 +613,7 @@ ol.carousel-indicators {
     left: 0;
     right: 0;
     width: auto;
-    animation: indicatorsAnimation ease 4s;
+    animation: indicatorsAnimation ease 4.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
  }
@@ -666,7 +671,6 @@ ol.carousel-indicators li.active {
         margin-top: -7vw;
         padding-top: 1.7%;
         text-align: center;
-        
 }
       
 .result-images {
@@ -1019,10 +1023,204 @@ ol.carousel-indicators li.active {
     color: rgb(13,12,181);
 }
 
-/*  */
+/* End of styles used mainly in index.html file */
 
 
 
+/* Style for teames pages */
+.teams-section-main-image {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7)  0%,rgba(0, 0, 0, 0.7)  100%), url("images/img07.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+}
+
+@media screen and (max-width: 768px) {
+    .teams-section-main-image {
+        height: 200px;
+    }   
+}
+
+.teams-section-main-image h2 {
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    color: white;
+    /* top: 15%; */
+    left: 80%; 
+    width: 100%;
+    transform: translateX(-80%) translateY(-15%);
+    margin-top: 140px;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Sintony', sans-serif;
+    font-family: 'Sora', sans-serif;
+    font-size: 5rem;
+    font-weight: 800;
+}
+
+@media screen and (max-width: 768px) {
+    .teams-section-main-image h2 {
+        font-size: 4rem;
+        margin-top: 110px;
+    }   
+}
+
+
+/* Style for mens section */
+
+.mens-players {
+    background-color: #fff;
+    height: 100%;
+    margin-top: -130px;
+    margin-bottom: 40px;
+    margin-left: -20px;
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .mens-players {
+        margin-top: 0px;
+    }
+}
+
+.player-type {
+    background-color: #fff;
+    text-align: center;
+    margin: 30px 0 20px 0px;
+}
+
+.player-type h2 {
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    color: rgb(0, 0, 75);
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Sintony', sans-serif;
+    font-family: 'Sora', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/* .player-type h2:before,
+.player-type h2:after {
+    content: '';
+    border-top: 4px solid rgb(13,12,181);
+    margin: 0 20px 0 0px;
+    flex: 1 0 20px;
+}
+
+.player-type h2:after {
+    margin: 0 0px 0 20px;
+} */
+
+.table-wrapper {
+    padding: 60px 40px 40px 40px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    /* background-color: red; */
+}
+
+.table {
+    font-size: 1.5rem;
+    width: 100%;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Sintony', sans-serif;
+    font-family: 'Sora', sans-serif;
+    color:  rgb(0, 0, 75);
+    border: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    .table {
+        font-size: 1.3rem;
+    }
+}
+
+.table thead {
+    color: #fff;
+    background-color: rgb(13,12,181);
+    border: 0;
+}
+
+.table {border: 0;} 
+.table tr, .table td, .table th {border: 0!important;}
+.table tr:nth-child(1), 
+.table tr:nth-child(1) {border-bottom: 1px solid rgb(0, 0, 75)!important;}
+.table tr:nth-child(2) {border-bottom: 1px solid rgb(0, 0, 75)!important;}
+.table tr:nth-child(3) {border-bottom: 1px solid rgb(0, 0, 75)!important;}
+.table tr:nth-child(4) {border-bottom: 1px solid rgb(0, 0, 75)!important;}
+.table tr:nth-child(5) {border-bottom: 1px solid rgb(0, 0, 75)!important;}
+.table tr:nth-child(6) {border-bottom: 1px solid rgb(0, 0, 75)!important;}
+.table tr:nth-child(7) {border-bottom: 1px solid rgb(0, 0, 75)!important;}
+.table tr:nth-child(8) {border-bottom: 1px solid rgb(0, 0, 75)!important;}
+.table tr:nth-child(9) {border-bottom: 1px solid rgb(0, 0, 75)!important;}
+.table tr:nth-child(10) {border-bottom: 1px solid rgb(0, 0, 75)!important;}
+.table tr:nth-child(11) {border-bottom: 1px solid rgb(0, 0, 75)!important;}
+.table tr:nth-child(12) {border-bottom: 1px solid rgb(0, 0, 75)!important;}
+.table tr:nth-child(13) {border-bottom: 1px solid rgb(0, 0, 75)!important;}
+.table tr:nth-child(14) {border-bottom: 1px solid rgb(0, 0, 75)!important;}
 
 
 
+.tablink {
+    background-color: #fff;
+    color: rgb(0, 0, 75);
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    width: 33.3333333%;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Sintony', sans-serif;
+    font-family: 'Sora', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+    .tablink {
+        font-size: 1.3rem;
+    }
+}
+
+
+.tablink:hover {
+    color: rgb(13,12,181);
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    height: 100%;
+}
+
+#Home {background-color: #fff;}
+#News {background-color: #fff;}
+#Contact {background-color: #fff;}
+
+
+.home-club {
+    background-color: #ebebeb;
+    font-weight: 800;
+}
+
+
+@media screen and (max-width: 768px) {
+    .table {
+        font-size: 1.1rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .table-matches {
+        margin: 0 auto;
+    }
+}

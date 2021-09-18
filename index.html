@@ -19,16 +19,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script>
-        $('.navTrigger').click(function () {
-            $(this).toggleClass('active');
-            $("#mainListDiv").toggleClass("show_list");
-            $("#mainListDiv").fadeIn();
-
-        });
-
-    </script>
-    <!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <!-- function wanted to work only on current html file -->
     <script>
         $(window).scroll(function () {
             if ($(document).scrollTop() > 50) {
@@ -39,28 +30,14 @@
             }
         });
     </script>
-    <script>
-        $(window).scroll(function () {
-            if ($(document).scrollTop() > 1000) {
-                // console.log("OK");
-            }
-        });
-    </script>
-    <script>
-        function scrollDown() {
-            $('html, body').animate({
-                scrollTop: $(".middle-section-background").offset().top - 64
-            }, 1000);
-        }
-    </script>
     <!-- Jquery needed -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!-- <script src="js/scripts.js"></script> -->
+    <script src="js/scripts.js"></script>
 </head>
 
 <body>
     <!-- Navigation bar -->
-    <nav class="main-nav">
+    <nav class="main-nav dynamic">
         <div class="container">
             <div class="logo">
                 <a class="navbar-brand" href="#"></a>
@@ -69,12 +46,11 @@
                 <ul class="navlinks">
                     <li class="active-page"><a href="#">DOMŮ</a></li>
                     <li><a href="muzi.html">MUŽI</a></li>
-                    <li><a href="#">DOROST</a></li>
-                    <li><a href="#">ŽÁCI</a></li>
-                    <li><a href="#">PŘÍPRAVKA</a></li>
-                    <li><a href="#">KLUB</a></li>
-                    <li><a href="#">KONTAKT</a></li>
-                    <li><a href="#">
+                    <li><a href="dorost.html">DOROST</a></li>
+                    <li><a href="zaci.html">ŽÁCI</a></li>
+                    <li><a href="pripravka.html">PŘÍPRAVKA</a></li>
+                    <li><a href="klub.html">KLUB</a></li>
+                    <li><a href="kontakt.html">KONTAKT</a></li>
                 </ul>
             </div>
             <span class="navTrigger">
@@ -100,7 +76,6 @@
                 <br>
                 <div class="arrow-container" onclick="scrollDown()">
                     <div class="arrow"></div>
-                    <!-- <div class="arrow"></div> -->
                 </div>
             </div>
             <div class="carousel-item active">
@@ -114,21 +89,18 @@
             </div>
         </div>
     </div>
-    <!-- <div class="red-line"></div> -->
 
-
-
-    <!-- middle section  -->
+    <!-- middle section with results content images  -->
     <div class="container-fluid middle-section-background">
         <div class="container">
             <div class="result-section">
-                <a href="#">
+                <a onclick="openPageWithSection('muzi','mensTable')" style="cursor:pointer;">
                     <div class="result-images">
                         <div class="muzi">
                         </div>
                         <div class="result-title">MUŽI</div>
-                        <div class="result-text">TJ SLAVOJ JESENÍK<br><span class="result-text-result">3:1</span><br>TJ SOKOL OSTRAVICE</div>
-                        <!-- <button class="result-button">ČÍST</button> -->
+                        <div class="result-text">TJ SLAVOJ JESENÍK<br><span class="result-text-result">3:1</span><br>TJ
+                            SOKOL OSTRAVICE</div>
                         <div class="result-date">15/8/2021</div>
                     </div>
                 </a>
@@ -156,11 +128,12 @@
                         <div class="result-date">12/8/2021</div>
                     </div>
                 </a>
-                <button class="results-bottom-button">VŠECHNY VÝSLEDKY</button>
+                <button class="results-bottom-button" onclick="openPageWithSection('muzi','resultTable')">VŠECHNY VÝSLEDKY</button>
             </div>
         </div>
     </div>
-    <!-- title -->
+
+    <!-- next matches section -->
     <div class="next-matches-section">
         <div class="container next-matches-title">
             <h2>DALŠÍ ZÁPAS</h2>
@@ -181,13 +154,9 @@
                     <div class="next-match-col">
                         <img src="images/stary-jicin.png" alt="Girl in a jacket" width="100" height="100">
                     </div>
-                    <a href="#" class="next-match-all">ROZPIS<span class="arrow-next-match">&raquo;</span></a>
-
-                    <!-- <div class="next-match-card-title">MUŽI</div> -->
+                    <a href="#" class="next-match-all" onclick="openPageWithSection('muzi','resultTable')">ROZPIS<span class="arrow-next-match">&raquo;</span></a>
                 </div>
-
                 <div class="match-results-divider-line"></div>
-                <!-- <h1>TJ Slavoj JESENÍK</h1> -->
                 <div class="next-match-card">
                     <div class="next-match-col">
                         <img src="images/ostravice.png" alt="Girl in a jacket" width="100" height="100">
@@ -205,7 +174,6 @@
                 </div>
 
                 <div class="match-results-divider-line"></div>
-                <!-- <h1>TJ Slavoj JESENÍK</h1> -->
                 <div class="next-match-card">
                     <div class="next-match-col">
                         <img src="images/koprivnice.png" alt="Girl in a jacket" width="100" height="100">
@@ -223,7 +191,6 @@
                 </div>
 
                 <div class="match-results-divider-line"></div>
-                <!-- <h1>TJ Slavoj JESENÍK</h1> -->
                 <div class="next-match-card">
                     <div class="next-match-col">
                         <img src="images/logo.png" alt="Girl in a jacket" width="85" height="100">
@@ -239,18 +206,15 @@
                     </div>
                     <a href="#" class="next-match-all">ROZPIS<span class="arrow-next-match">&raquo;</span></a>
                 </div>
-
             </div>
         </div>
     </div>
     </div>
 
-
-
-
+    <!-- section with sponsors logos -->
     <div class="sponsors">
-
     </div>
+
     <!-- bottom section -->
     <div class="container-fluid bottom-section">
         <!-- <p>© TJ Slavoj Jeseník nad Odrou</p> -->
@@ -261,5 +225,4 @@
     </div>
 
 </body>
-
 </html>
