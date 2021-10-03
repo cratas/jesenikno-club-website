@@ -14,11 +14,6 @@ $('.navTrigger').click(function () {
 
 });
 
-$(window).scroll(function () {
-    if ($(document).scrollTop() > 1000) {
-        // console.log("OK");
-    }
-});
 
 function scrollDown() {
     $('html, body').animate({
@@ -37,12 +32,16 @@ function openPage(pageName, elmnt) {
 
     tablinks = document.getElementsByClassName("tablink");
     for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style = "border-bottom: 4px solid #ebebeb";
+        tablinks[i].style = "background: linear-gradient(rgb(13,12,181) 0 0) 0 100% /var(--d, 0) 4px no-repeat; transition:0.25s; --d: 0%;";
     }
+
     document.getElementById(pageName).style.display = "block";
+    elmnt.style = "background: linear-gradient(rgb(13,12,181) 0 0) 0 100% /var(--d, 0) 4px no-repeat; transition:0.25s; --d: 100%;";
 
-    elmnt.style = "border-bottom: 4px solid rgb(13,12,181)";
-
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].removeEventListener("mouseleave", (event) => { event.target.style = "--d: 100%;" });
+    }
 }
 
 function openPageWithSection(page, section) {
