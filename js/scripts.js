@@ -1,3 +1,30 @@
+$(document).ready(function(){
+    try {
+        $('.customer-logos').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            arrows: false,
+            dots: false,
+                pauseOnHover: false,
+                responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 2
+                }
+            }]
+        });
+    } catch(error) {
+        console.log("class not found.")
+    }
+});
+
 
 $('.navTrigger').click(function () {
     $(this).toggleClass('active');
@@ -32,16 +59,26 @@ function openPage(pageName, elmnt) {
 
     tablinks = document.getElementsByClassName("tablink");
     for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style = "background: linear-gradient(rgb(13,12,181) 0 0) 0 100% /var(--d, 0) 4px no-repeat; transition:0.25s; --d: 0%;";
+        tablinks[i].classList.remove("active-page-tablink");
     }
 
     document.getElementById(pageName).style.display = "block";
-    elmnt.style = "background: linear-gradient(rgb(13,12,181) 0 0) 0 100% /var(--d, 0) 4px no-repeat; transition:0.25s; --d: 100%;";
 
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].removeEventListener("mouseleave", (event) => { event.target.style = "--d: 100%;" });
-    }
+    switch(pageName) {
+        case 'Home':
+            var element = document.getElementById('defaultOpen');
+            element.classList.add("active-page-tablink");
+            break;
+        case 'News':
+            var element = document.getElementById('mensTable');
+            element.classList.add("active-page-tablink");
+            break;
+        case 'Contact':
+            var element = document.getElementById('resultTable');
+            element.classList.add("active-page-tablink");
+            break;
+      }
+
 }
 
 function openPageWithSection(page, section) {
