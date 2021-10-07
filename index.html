@@ -4,8 +4,10 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>TJ Slavoj</title>
+    <title>TJ Slavoj Jeseník nad Odrou</title>
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="/Cms_Data/Sites/fotbalstaryjicin/Files/favicon.ico">
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -29,6 +31,7 @@
                 $('.main-nav').removeClass('affix');
             }
         });
+
     </script>
     <!-- Jquery needed -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -43,7 +46,7 @@
     <nav class="main-nav dynamic">
         <div class="container">
             <div class="logo">
-                <a class="navbar-brand" href="#"></a>
+                <a class="navbar-brand" href="index.html"></a>
             </div>
             <div id="mainListDiv" class="main_list">
                 <ul class="navlinks">
@@ -56,7 +59,7 @@
                     <li><a href="kontakt.html">KONTAKT</a></li>
                 </ul>
             </div>
-            <span class="navTrigger">
+            <span onclick="openMobileMenu()" class="navTrigger">
                 <i></i>
                 <i></i>
                 <i></i>
@@ -85,10 +88,10 @@
                 <img class="d-block w-100" src="images/img05.jpg" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="images/img01.jpg" alt="Second slide">
+                <img class="d-block w-100" src="images/img08.jpg" alt="Second slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="images/img03.jpg" alt="Third slide">
+                <img class="d-block w-100" src="images/img11.jpg" alt="Third slide">
             </div>
         </div>
     </div>
@@ -102,8 +105,7 @@
                         <div class="muzi">
                         </div>
                         <div class="result-title">MUŽI</div>
-                        <div class="result-text">TJ SLAVOJ JESENÍK<br><span class="result-text-result">3:1</span><br>TJ
-                            SOKOL OSTRAVICE</div>
+                        <div class="result-text">TJ SLAVOJ JESENÍK<br><span class="result-text-result">2:1</span><br>FK FRYČOVICE</div>
                         <div class="result-date">15/8/2021</div>
                     </div>
                 </a>
@@ -112,6 +114,8 @@
                         <div class="dorost">
                         </div>
                         <div class="result-title">DOROST</div>
+                        <div class="result-text">FK KOPŘIVNICE<br><span class="result-text-result">2:4</span><br>TJ
+                            SLAVOJ JESENÍK</div>
                         <div class="result-date">12/8/2021</div>
                     </div>
                 </a>
@@ -120,6 +124,8 @@
                         <div class="zaci">
                         </div>
                         <div class="result-title">ŽÁCI</div>
+                        <div class="result-text">TJ SLAVOJ JESENÍK<br><span class="result-text-result">9:1</span><br>FK NOVÝ JIČÍN
+                        </div>
                         <div class="result-date">12/8/2021</div>
                     </div>
                 </a>
@@ -128,6 +134,8 @@
                         <div class="pripravka">
                         </div>
                         <div class="result-title">PŘÍPRAVKA</div>
+                        <div class="result-text">TJ SLAVOJ JESENÍK<br><span class="result-text-result">1:5</span><br>TJ
+                            SOKOL OSTRAVICE</div>
                         <div class="result-date">12/8/2021</div>
                     </div>
                 </a>
@@ -219,14 +227,22 @@
     <!-- sponsors section -->
     <div class="sponsors">
         <div class="customer-logos container">
-            <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-carousel/master/images/image1.png"></div>
-            <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-carousel/master/images/image2.png"></div>
-            <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-carousel/master/images/image3.png"></div>
-            <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-carousel/master/images/image4.png"></div>
-            <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-carousel/master/images/image5.png"></div>
-            <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-carousel/master/images/image6.png"></div>
-            <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-carousel/master/images/image7.png"></div>
-            <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-carousel/master/images/image8.png"></div>
+            <div class="slide"><img
+                    src="https://raw.githubusercontent.com/solodev/infinite-carousel/master/images/image1.png"></div>
+            <div class="slide"><img
+                    src="https://raw.githubusercontent.com/solodev/infinite-carousel/master/images/image2.png"></div>
+            <div class="slide"><img
+                    src="https://raw.githubusercontent.com/solodev/infinite-carousel/master/images/image3.png"></div>
+            <div class="slide"><img
+                    src="https://raw.githubusercontent.com/solodev/infinite-carousel/master/images/image4.png"></div>
+            <div class="slide"><img
+                    src="https://raw.githubusercontent.com/solodev/infinite-carousel/master/images/image5.png"></div>
+            <div class="slide"><img
+                    src="https://raw.githubusercontent.com/solodev/infinite-carousel/master/images/image6.png"></div>
+            <div class="slide"><img
+                    src="https://raw.githubusercontent.com/solodev/infinite-carousel/master/images/image7.png"></div>
+            <div class="slide"><img
+                    src="https://raw.githubusercontent.com/solodev/infinite-carousel/master/images/image8.png"></div>
         </div>
     </div>
 
@@ -257,12 +273,12 @@
                 <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
             </div>
 
-            
+
             <div class="comp-info">
-                <i class="fa fa-map-marker"></i> 
+                <i class="fa fa-map-marker"></i>
                 Jeseník nad Odrou 235, 742 33 Jeseník nad Odrou, Česká republika
-                &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;<strong>IČ:</strong>000000
-                &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;<strong>DIČ:</strong>000000
+                <!-- &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;<strong>IČ:</strong>000000
+                &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;<strong>DIČ:</strong>000000 -->
             </div>
             <div class="contact-info">
                 <div class="phone">
@@ -278,7 +294,7 @@
             </div>
 
 
-    </div>
+        </div>
     </div>
 
 </body>

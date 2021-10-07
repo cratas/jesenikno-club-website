@@ -329,8 +329,8 @@ li.active-page {
     .navbar-brand {
         position: absolute;
         background: url(images/version_1.png);
-        width: 42px;
-        height: 42px;
+        width: 43px;
+        height: 50px;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -342,10 +342,16 @@ li.active-page {
         height: 0;
         overflow: hidden;
     }
+
     .main-nav div.show_list {
-        height: auto;
+        position: relative;
+        height: 100%;
         display: none;
+        margin-top: 0px;
+        display: flex;
+        align-items: stretch;
     }
+
     .main-nav div.main_list ul {
         flex-direction: column;
         width: 100%;
@@ -353,28 +359,22 @@ li.active-page {
         right: 0;
         left: 0;
         bottom: 0;
-        background: rgb(143,255,111);
-        background: linear-gradient(90deg, rgba(143,255,111,1) 0%, rgba(121,9,9,1) 0%, rgba(255,255,255,1) 0%, rgba(0,74,255,1) 100%);
-        /*same background color of navbar*/
-        background-position: center top;
+        background-color: #000; 
     }
     .main-nav div.main_list ul li {
         width: 100%;
-        text-align: right;
+        height: 100%;
+        background-color: red;
     }
     .main-nav div.main_list ul li a {
-        text-align: center;
-        width: 100%;
-        font-size: 3rem;
-        padding: 20px;
+        /* width: 100%; */
+        font-size: 2rem;
+        color:rgb(0, 0, 75);
     }
     .main-nav div.media_button {
         display: block;
     }
-
-
 }
-
 
 /* Animation */
 .navTrigger {
@@ -957,8 +957,9 @@ nav ul li:hover {
     height: 100%;
     position: relative;
     background-size: cover;
-    background-image: url("images/img01.jpg");
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2)  0%,rgba(0,0,0,0.6) 100%), url("images/img01.jpg");
+    background-image: url("images/img10.jpg");
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2)  0%,rgba(0,0,0,0.6) 100%), url("images/img10.jpg");
+    background-position: center;
     transition: all 0.5s;
 }
 
@@ -967,8 +968,9 @@ nav ul li:hover {
     height: 100%;
     position: relative;
     background-size: cover;
-    background-image: url("images/img02.jpg");
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2)  0%,rgba(0,0,0,0.6) 100%), url("images/img02.jpg");
+    background-image: url("images/img06.jpg");
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2)  0%,rgba(0,0,0,0.6) 100%), url("images/img06.jpg");
+    background-position: center;
     transition: all 0.5s;
 }
 
@@ -994,12 +996,12 @@ nav ul li:hover {
 }
 
 .zaci:hover {
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2)  0%,rgba(0,0,0,0.6) 100%), url("images/img01.jpg");
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2)  0%,rgba(0,0,0,0.6) 100%), url("images/img10.jpg");
     transform: scale(1.2);
 }
 
 .pripravka:hover {
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2)  0%,rgba(0,0,0,0.6) 100%), url("images/img02.jpg");
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2)  0%,rgba(0,0,0,0.6) 100%), url("images/img06.jpg");
     transform: scale(1.2);
 }
 

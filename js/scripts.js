@@ -26,21 +26,12 @@ $(document).ready(function(){
 });
 
 
-$('.navTrigger').click(function () {
+function openMobileMenu() {
     $(this).toggleClass('active');
     console.log("Clicked menu");
     $("#mainListDiv").toggleClass("show_list");
     $("#mainListDiv").fadeIn();
-
-});
-
-$('.navTrigger').click(function () {
-    $(this).toggleClass('active');
-    $("#mainListDiv").toggleClass("show_list");
-    $("#mainListDiv").fadeIn();
-
-});
-
+};
 
 function scrollDown() {
     $('html, body').animate({
