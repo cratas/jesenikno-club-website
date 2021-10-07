@@ -318,7 +318,7 @@ li.active-page {
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 1000px) {
     .navTrigger {
         display: block;
     }
@@ -1009,9 +1009,9 @@ nav ul li:hover {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0%);
-    bottom: 20%;
+    bottom: 15%;
     color: #ebebeb;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: 'DM Sans', sans-serif;
     font-family: 'Sintony', sans-serif;
     font-family: 'Sora', sans-serif;
@@ -1022,7 +1022,7 @@ nav ul li:hover {
 
 .result-text-result {
     color: #fff;
-    font-size: 2.8rem;
+    font-size: 2.2rem;
 }
 
 .result-title {
@@ -1320,7 +1320,7 @@ nav ul li:hover {
     font-family: 'DM Sans', sans-serif;
     font-family: 'Sintony', sans-serif;
     font-family: 'Sora', sans-serif;
-    font-size: 5rem;
+    font-size: 3.5rem;
     font-weight: 800;
 }
 
@@ -1337,7 +1337,7 @@ nav ul li:hover {
 .mens-players {
     background-color: #fff;
     height: 100%;
-    margin-top: -130px;
+    margin-top: -160px;
     margin-bottom: 70px;
     margin-left: -20px;
     position: relative;
