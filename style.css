@@ -11,6 +11,7 @@ body {
     font-family: 'Sora', sans-serif;  
     font-size: 62.5%;
     font-size: 10px;
+    /* letter-spacing: 1px; */
 }
 
 *:focus {
@@ -341,15 +342,22 @@ li.active-page {
         width: 100%;
         height: 0;
         overflow: hidden;
+        
     }
 
     .main-nav div.show_list {
-        position: relative;
-        height: 100%;
-        display: none;
-        margin-top: 0px;
-        display: flex;
-        align-items: stretch;
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        background-color: #ebebeb;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        overflow: visible;
+        margin-top: -8px;
+        margin-bottom: -5px;
+
+
     }
 
     .main-nav div.main_list ul {
@@ -359,17 +367,18 @@ li.active-page {
         right: 0;
         left: 0;
         bottom: 0;
-        background-color: #000; 
+        background-color: #fff;
+       
     }
     .main-nav div.main_list ul li {
         width: 100%;
         height: 100%;
-        background-color: red;
+        margin-left: 15px;
     }
     .main-nav div.main_list ul li a {
         /* width: 100%; */
         font-size: 2rem;
-        color:rgb(0, 0, 75);
+        color: rgb(0, 0, 75);
     }
     .main-nav div.media_button {
         display: block;
@@ -1142,7 +1151,7 @@ nav ul li:hover {
 .next-matches-title h2:before,
 .next-matches-title h2:after {
     content: '';
-    border-top: 10px solid rgb(13,12,181);
+    border-top: 7px solid rgb(13,12,181);
     margin: 0 20px 0 0;
     flex: 1 0 20px;
 }
@@ -1160,9 +1169,9 @@ nav ul li:hover {
 }
 
 .next-match-wrap {
-    border-right: 10px solid rgb(13,12,181);
-    border-left: 10px solid rgb(13,12,181);
-    border-bottom: 10px solid rgb(13,12,181);
+    border-right: 7px solid rgb(13,12,181);
+    border-left: 7px solid rgb(13,12,181);
+    border-bottom: 7px solid rgb(13,12,181);
     margin-top: -23px;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -1284,6 +1293,7 @@ nav ul li:hover {
 
 .next-match-all:hover {
     text-decoration: none;
+    color: rgb(13,12,181)
 }
 
 /* End of styles used mainly in index.html file */
@@ -1516,31 +1526,17 @@ nav ul li:hover {
     padding-bottom: 50px;
 }
 
-.contact-form {
+.map {
     width: 100%;
-    height: 400px;
-    background-color: #fff;
-    margin-top: 40px;
+    height: auto;
+    margin-top: 30px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.map-responsive{
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
-    padding-bottom:40%;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+iframe {
+    width: 100%;
+    height: 300px;
 }
-
-.map-responsive iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
-}
-
 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -1558,7 +1554,6 @@ nav ul li:hover {
     text-align: left;
     background-color: #fff;
     margin-right: 30px;
-    /* border-radius: 20px; */
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
   
@@ -1567,12 +1562,92 @@ nav ul li:hover {
     flex: 45%;
     text-align: left;
     background-color: #fff;
-    /* border-radius: 20px; */
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-
   }
 
-  .flex-container h3 { 
+  .flex-item-left-map-from {
+    flex: 55%;
+  }
+  
+  .flex-item-right-map-form {
+    flex: 45%;
+    text-align: left;
+  }
+
+.contact-form {
+    /* background-color: #fff; */
+    width: 100%;
+    height: 100%;
+}
+
+.contact-form-inside {
+    width: 100%;
+    height: 90%;
+    margin-top: 5.5%;
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 50px;
+}
+
+.contact-form-inside h2 {
+    color: rgb(0, 0, 75);
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: none;
+    color: rgb(0, 0, 75);
+    border-bottom: 2px solid rgb(0, 0, 75); 
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    font-size: 1.8rem;
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+
+  #subject {
+      font-size: 1.8rem;
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  /* input[type=submit] {
+    background-color: rgb(184, 16, 16);
+    color: white;
+    padding: 12px 20px;
+    font-size: 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  } */
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  /* input[type=submit]:hover {
+    background-color: rgb(184, 16, 16);
+  } */
+  
+
+
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:136.25%;
+    position:relative;
+    height:0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.map-responsive iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+ 
+.flex-container h3 { 
     color: rgb(0, 0, 75);
     font-size: 23px;
     font-weight: 700;
@@ -1582,14 +1657,14 @@ nav ul li:hover {
     color:rgb(32, 32, 32);
     font-weight: 500;
     /* color:rgb(91, 91, 99); */
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .flex-container h5 { 
-    color:rgb(13,12,181);
+    color:rgb(0, 0, 122);
     font-weight: 700;
     /* color:rgb(91, 91, 99); */
-    font-size: 19px;
+    font-size: 17px;
   }
 
 
@@ -1606,10 +1681,12 @@ nav ul li:hover {
     .flex-item-left {
       margin-right: 0px;
       margin-bottom: 20px;
+      flex: 100%;
     }
 
     .flex-item-right {
         margin-bottom: -10px;
+        flex: 100%;
       }
 
     .flex-container h3 { 
@@ -1621,7 +1698,7 @@ nav ul li:hover {
       }
 
       .flex-container h5 { 
-        font-size: 17px;
+        font-size: 15px;
       }
   }
 
