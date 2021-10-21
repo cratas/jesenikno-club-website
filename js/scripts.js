@@ -80,8 +80,6 @@ function openPageWithSection(page, section) {
     window.location.href= "muzi.html";
 }
 
-
-
 window.addEventListener("load", function () {
     var selector = this.localStorage.getItem('section');
 
@@ -94,3 +92,27 @@ window.addEventListener("load", function () {
     
     localStorage.setItem('section', 'defaultOpen');
 });
+
+
+//countdown timer for remaining time until next match
+function updateTimer() {
+    future = Date.parse("jun 12, 2022 01:30:00");
+ now = new Date();
+ diff = future - now;
+
+ days = Math.floor(diff / (1000 * 60 * 60 * 24));
+ hours = Math.floor(diff / (1000 * 60 * 60));
+ mins = Math.floor(diff / (1000 * 60));
+ secs = Math.floor(diff / 1000);
+
+ d = days;
+ h = hours - days * 24;
+ m = mins - hours * 60;
+ s = secs - mins * 60;
+
+ document.getElementById("remaining-time")
+  .innerHTML = d + "d / " + h + "h / " + m +"m / " + s + "s" ;
+}
+
+setInterval('updateTimer()', 1000);
+

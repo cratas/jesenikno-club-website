@@ -356,8 +356,6 @@ li.active-page {
         overflow: visible;
         margin-top: -8px;
         margin-bottom: -5px;
-
-
     }
 
     .main-nav div.main_list ul {
@@ -368,7 +366,6 @@ li.active-page {
         left: 0;
         bottom: 0;
         background-color: #fff;
-       
     }
     .main-nav div.main_list ul li {
         width: 100%;
@@ -1294,6 +1291,22 @@ nav ul li:hover {
 .next-match-all:hover {
     text-decoration: none;
     color: rgb(13,12,181)
+}
+
+.remaining-time {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(0, 0, 75);
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Sintony', sans-serif;
+    font-family: 'Sora', sans-serif;
+}
+
+.remaining-time span {
+    color: red;
 }
 
 /* End of styles used mainly in index.html file */
